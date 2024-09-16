@@ -18,10 +18,7 @@ main{
 h1{
     color: var(--primaryColor);
 }
-h1 svg{
-    width: 40px;
-    fill: var(--primaryColor);
-}
+
 #header{
     display: grid;
     grid-template-columns: 1fr 1fr;
