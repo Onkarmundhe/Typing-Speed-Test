@@ -9,7 +9,6 @@ A modern, responsive typing speed test application that measures your typing spe
 - **Streak Counter**: Shows current streak of correctly typed words
 - **Adaptive Cursor**: Visual cursor that follows your typing position
 - **Theme Support**: Light and dark theme options
-- **Responsive Design**: Works on both desktop and mobile devices
 - **60-Second Tests**: Standard one-minute typing tests
 - **Error Tracking**: Immediate visual feedback for typing mistakes
 
@@ -43,7 +42,6 @@ git clone https://github.com/Onkarmundhe/typing-speed-test.git
 - Built with JavaScript (no frameworks)
 - Uses CSS Grid and Flexbox for layout
 - Implements custom cursor animation
-- Responsive design with media queries
 - Font: Roboto & Roboto Mono from Google Fonts
 
 ## Project Structure
@@ -55,9 +53,3 @@ typing-speed-test/
 └── index.js
 ```
 
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
