@@ -5,6 +5,15 @@
     --textSecondary: #666;
     --primaryColor: #fd4;
 }
+
+/* Add light theme */
+[data-theme="light"] {
+    --bgColor: #f5f5f5;
+    --textPrimary: #333;
+    --textSecondary: #666;
+    --primaryColor: #f50;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color:var(--bgColor);
@@ -85,26 +94,68 @@ div.word{
         opacity: 1;
     }
 }
-#cursor{
-    display:none;
+#cursor {
+    display: none;
     width: 2px;
     height: 1.6rem;
     background: var(--primaryColor);
-    position: fixed;
-    top: 198px;
-    left: 18px;
+    position: absolute;
     animation: blink .3s infinite;
+    transition: all 0.1s ease;
+    pointer-events: none; /* Ensure cursor doesn't interfere with clicking */
 }
-#game:focus #cursor{
+#game:focus #cursor {
     display: block;
 }
-#game.over #words{
+#game.over #words {
     opacity: .5;
     filter: blur(0px);
 }
-#game.over:focus #cursor{
-    display:none;
+#game.over:focus #cursor {
+    display: none;
 }
 #game.over #focus-error {
     display: none;
+}
+
+#stats {
+    display: grid;
+    gap: 5px;
+}
+
+#accuracy, #streak {
+    font-size: 1rem;
+    color: var(--primaryColor);
+}
+
+/* Add transition effects */
+#game, button, .word {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--primaryColor);
+    color: var(--bgColor);
+    transform: translateY(-2px);
+}
+
+.word.current {
+    transform: scale(1.05);
+}
+
+/* Add responsive design */
+@media (max-width: 650px) {
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    #header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    #buttons {
+        text-align: center;
+    }
 }
